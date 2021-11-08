@@ -9,6 +9,8 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = 'RoohServer';
+  isCreated = false;
+  allServers = ['linux', 'ubuntu'];
 
   constructor() {
     setTimeout(() => {
@@ -18,6 +20,8 @@ export class ServersComponent implements OnInit {
 
   onCreateServer()
   {
+    this.isCreated = true;
+    this.allServers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
