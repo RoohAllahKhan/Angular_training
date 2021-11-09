@@ -6,14 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  username = '';
+  toggleFlag = false;
+  clicks = [];
+  counterFlag = 0;
 
   constructor() {}
-  isEmptyUsername() {
-    return this.username === '';
+
+  toggleDisplay()
+  {
+    this.toggleFlag = this.toggleFlag === false;
+    ++this.counterFlag;
+    this.clicks.push('Click ' + this.counterFlag);
   }
 
-  emptyUser() {
-    this.username = '';
+  bgColor()
+  {
+      return 'blue';
   }
+
 }
