@@ -14,4 +14,12 @@
         </ol>
       </div>
     </div>
+  <hr>
+    <div class="row">
+      <app-game-control (startGame)="checkNumber($event)"></app-game-control>
+    </div>
+    <div class="row">
+      <app-odd *ngFor="let oddNum of oddNumbers" [number]="oddNum"></app-odd>
+      <app-even *ngFor="let evenNum of evenNumbers" [number]="evenNum"></app-even>
+    </div>
 </div>
