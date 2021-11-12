@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   serverFlag: boolean = false;
   serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
+  value = 200;
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({

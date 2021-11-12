@@ -12,5 +12,11 @@
   <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'"  >Style me with better directive</p>
   <!-- *ngIf === <ng-template [ngIf]></ng-template> -->
   <div *appUnless="serverFlag">Hi I am true!</div>
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is {{ value }}</p>
+    <p *ngSwitchCase="10">Value is {{ value }}</p>
+    <p *ngSwitchCase="100">Value is {{ value }}</p>
+    <p *ngSwitchDefault>Value is Default</p>
+  </div>
 
 </div>
